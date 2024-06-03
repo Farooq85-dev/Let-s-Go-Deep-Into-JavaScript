@@ -26,7 +26,7 @@ let obj2 = obj1;
 obj2.name = "Muhammad Faiq";
 obj2.class = "WAM-10";
 obj2.section = "B+";
-console.log(obj1); // Intersting concept here. Please, note here.
-console.log(obj2); // Intersting concept here. Please, note here.
+console.log(obj1); // Interesting concept here. Please, note here.
+console.log(obj2); // Interesting concept here. Please, note here.
 
 // ********** The End ********** //

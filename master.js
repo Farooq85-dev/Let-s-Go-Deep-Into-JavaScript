@@ -30,3 +30,27 @@ console.log(obj1); // Interesting concept here. Please, note here.
 console.log(obj2); // Interesting concept here. Please, note here.
 
 // ********** The End ********** //
+
+// ********** Important Methods ********** //
+
+/* This method type is String Object. Strings are not true arrays, and therefore they
+do not have array methods. They can be accessed like an array-indexing. Also, we can apply
+length property. */
+
+let name3 = new String("Muhammad Farooq");
+console.log(typeof name3); //Excpected type will be Object
+console.log(name3[0]); //Excepected output will be 'm'
+console.log(name3.length); //Excepected output will be 15
+
+/* Slice Method with Negative indexing. */
+
+let name5 = "Muhammad Fiaz";
+console.log(name5.slice(-10, 8)); /*Excpected output will be "Muhammad". Negative
+indexing start from the end. If we will give the negative index numbering greater
+than the length it will simply start from end of string character. */
+console.log(name5.slice(0, 9)); //Excpected output will be same as in top
+
+/* subString Methods */
+
+console.log(name5.substring(-10, 8)); //Negative indexing will not worked in here
+console.log(name5.substring(0, 9)); ////Excpected output will be "Muhammad"

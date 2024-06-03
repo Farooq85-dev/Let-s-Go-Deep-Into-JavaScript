@@ -54,3 +54,11 @@ console.log(name5.slice(0, 9)); //Excpected output will be same as in top
 
 console.log(name5.substring(-10, 8)); //Negative indexing will not worked in here
 console.log(name5.substring(0, 9)); ////Excpected output will be "Muhammad"
+
+/* toLaclaleString */
+
+const thaousand = 1000000000;
+console.log(thaousand.toLocaleString());//Output according to the default US format. 
+console.log(thaousand.toLocaleString('en-Pk')); /*Excpected output will be according to
+number format of PAKISTAN.*/
+

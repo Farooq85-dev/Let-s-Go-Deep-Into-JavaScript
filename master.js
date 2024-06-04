@@ -82,3 +82,23 @@ console.log(myDt4.toLocaleString()); //Excpected output will be like this 04/06/
 const myDt5 = new Date();
 console.log(myDt5.toLocaleTimeString()); //Excpected output will be like this 6:48:59 pm
 
+/* copyWithin */
+/* This method will copy the array elements within same array. It will give the same length in return. */
+let arr0 = [0, 25, 5, 8, 9, 45, 4, 5];
+//syntax=> copyWithin(target,start,end)
+console.log(arr0.copyWithin(2, 4, 6));
+
+/* entries */
+// It will gives the itterator object in return. It will behave like object
+console.log(arr0.entries());
+console.log(arr0[3]);
+
+/* fill */
+let arr1 = ["a", "b", "c", "d", "x", "t", "e", "g"];
+//Syntax=> .fill(value, start, end)
+console.log(arr1.fill("Farooq", 3, 7));
+
+/* flat */
+let nestedArray = [5, 85, 75, 5945, 9645, [41, 89, 78, [32, 9, 8, 471, ["Muhammad Farooq", "Faizan"]]]];
+//Syntax=> .flat(5) Inside paranthesis you will provide value of how much deep (means nested) it will go for flatness of array
+console.log(nestedArray.flat(3));

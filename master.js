@@ -5,7 +5,6 @@ following examples. */
 
 /* In Simple Words, Primitive Data types used Stack Memory. Primitive values are immutable
 (can't be changed). However, we are changing it's copy value not it's original value. */
-
 let name1 = "Muhammad Azam";
 let name2 = name1;
 name2 = "Muhammad Farooq";
@@ -14,7 +13,6 @@ console.log(name2); //Excepted Output will be "Muhammad Farooq"
 
 /* In Simple Word's, Non-Primitive data types are using Heap memory.They are mutable
 (can be changed).  */
-
 let obj1 = {
     name: "Muhammad Arslan",
     class: "WAM-5",
@@ -43,7 +41,6 @@ console.log(name3[0]); //Excepected output will be 'm'
 console.log(name3.length); //Excepected output will be 15
 
 /* Slice Method with Negative indexing. */
-
 let name5 = "Muhammad Fiaz";
 console.log(name5.slice(-10, 8)); /*Excpected output will be "Muhammad". Negative
 indexing start from the end. If we will give the negative index numbering greater
@@ -51,7 +48,6 @@ than the length it will simply start from end of string character. */
 console.log(name5.slice(0, 9)); //Excpected output will be same as in top
 
 /* subString Methods */
-
 console.log(name5.substring(-10, 8)); //Negative indexing will not worked in here
 console.log(name5.substring(0, 9)); ////Excpected output will be "Muhammad"
 
@@ -61,4 +57,28 @@ const thaousand = 1000000000;
 console.log(thaousand.toLocaleString());//Output according to the default US format. 
 console.log(thaousand.toLocaleString('en-Pk')); /*Excpected output will be according to
 number format of PAKISTAN.*/
+
+/* toLocaleDateString */
+const myDt0 = new Date();
+console.log(myDt0.toLocaleDateString()); //Excpected output will be current date in this Format 04/09/2024
+
+/* toDateString */
+const myDt1 = new Date();
+console.log(myDt1.toDateString()); //Excpected output will be current date in this Format e.g Tue Jan 04 2024  
+
+/* toISOString */
+const myDt2 = new Date();
+console.log(myDt2.toISOString()); //Excpected output will be current date in this Format e.g 2024-06-04T13:44:41.310Z  
+
+/* toJSON */
+const myDt3 = new Date();
+console.log(myDt3.toJSON()); //Excpected output will be same as to toISOString Format
+
+/* toLocaleString */
+const myDt4 = new Date();
+console.log(myDt4.toLocaleString()); //Excpected output will be like this 04/06/2024, 6:48:59 pm
+
+/* toLocaleTimeString */
+const myDt5 = new Date();
+console.log(myDt5.toLocaleTimeString()); //Excpected output will be like this 6:48:59 pm
 

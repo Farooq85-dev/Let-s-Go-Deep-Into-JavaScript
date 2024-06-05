@@ -102,3 +102,33 @@ console.log(arr1.fill("Farooq", 3, 7));
 let nestedArray = [5, 85, 75, 5945, 9645, [41, 89, 78, [32, 9, 8, 471, ["Muhammad Farooq", "Faizan"]]]];
 //Syntax=> .flat(5) Inside paranthesis you will provide value of how much deep (means nested) it will go for flatness of array
 console.log(nestedArray.flat(3));
+
+/* filter */
+let playerNames = ["Babar-Azam", "Rizwan", "Saim-Ayub", "M-Amir"];
+const fn = playerNames.filter((arrayElemnts) => arrayElemnts === "Babar-Azam");
+console.log(fn); //We want to filter the name that is equal to the "Babar-Azam"
+
+/* findLast */
+let classFellows = ["Anas", "Ahad", "Raza", "Ali"];
+let fn1 = classFellows.findLast((arrayElemnts) => { return arrayElemnts[0] }); //It itterate in the reverse order
+console.log(fn1);
+
+/* findLastIndex */
+let laptopBrands = ["Hp", "Dell", "Asus", "Toshiba", "Asus"];
+const fn3 = laptopBrands.findLastIndex((arrayElemnts) => { return arrayElemnts === "Asus" });
+console.log(fn3); /*Itterate in the reverse order and will give the first element from the end and
+ indexing start from start of the array */
+
+/* includes */
+let numbers = [0.25, 51.5, 1.581, 58.44, 0.25, .5, 4];
+console.log(numbers.includes(0.25));//Output in the boolean true or false
+
+/* reduce */
+let marks = [85, 58, 78, 92, 49, 67, 65, 49];
+let initialValue = 20;
+let fn4 = marks.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+console.log(fn4);//If we will not give the initailaValue then it will select the first element of array as the initail value
+
+/* toLocaleString & toString */
+console.log(marks.toString()); //Convert inti String
+console.log(marks.toLocaleString());//Excpected output will be same as toString

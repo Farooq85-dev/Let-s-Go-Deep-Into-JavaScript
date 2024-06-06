@@ -170,3 +170,32 @@ obj5["user_Email"] = "ahad123@gmail.com";//This email will not reflect into the 
 obj5["user_Password"] = "818787";
 console.log(obj5);
 
+/* methods inside the object */
+//What is 'this'? Ans: 'this' refers to the current object means obj6. However, we can also use the obj6 instead of this. But, sometimes it might be very helpful.
+let obj6 = {
+    "name": "Muhammad Babar",
+    "fathers_Name": "Muhammad Irshad",
+    bio() {
+        return `Hello! my name is ${this.name} and my father name is ${this.fathers_Name}`;
+    },
+};
+console.log(obj6.bio());//bio is a method inside the obj6;
+
+/* assign Method */
+let obj7 = { "a": 1, "b": 2, "c": 3 };
+let obj8 = { "d": 4, e: 5, "f": 6 };
+let obj9 = Object.assign(obj7, obj8);//Copies elemnt from the source object(obj8) to target object(obj7) 
+console.log("Single Object=>", obj9);
+
+/* Spread Operator. */
+let obj10 = { "g": "7", "h": "8", "i": "9" };
+let obj11 = { "j": "10", "k": "11", "l": "12" };
+let obj12 = { ...obj10, ...obj11 };
+console.log(obj12);
+
+/* Keys */
+console.log(Object.keys(obj12));//Excpected output will be the keys obj12
+
+/* values */
+console.log(Object.values(obj12));//Excpected output will be the values of obj12
+

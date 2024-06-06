@@ -132,3 +132,41 @@ console.log(fn4);//If we will not give the initailaValue then it will select the
 /* toLocaleString & toString */
 console.log(marks.toString()); //Convert inti String
 console.log(marks.toLocaleString());//Excpected output will be same as toString
+
+/* object */
+
+//Singletone 
+const obj = new Object;
+console.log(typeof obj);
+//Non-Singletone
+let obj3 = {};
+console.log(typeof obj3);
+
+/* Methods */
+
+/* freeze entire object via freeze*/
+let obj4 = {
+    "name": "Muhammad Ahmed",
+    "class": "WAM-10",
+    "Roll_No": "14524",
+    "hobby": "Hockey",
+    "favourite_Color": "Yellow"
+};
+Object.freeze(obj4);//Applying the freeze will freeze entitre object. Means we cannot change the object values;
+obj4["Roll_No"] = "4124552";//Excpected output will be 14524, because, object is freezed.
+console.log(obj4);
+
+/* freeze single property via property descriptors */
+let obj5 = {
+    "user_Name": "Ahad",
+    "user_Email": "ahad2gamil.com",
+    "user_Password": "******",
+};
+Object.defineProperty(obj5, 'user_Email', {
+    writable: false,
+    configurable: false,
+});
+obj5["user_Email"] = "ahad123@gmail.com";//This email will not reflect into the object because we have freezed it.
+obj5["user_Password"] = "818787";
+console.log(obj5);
+

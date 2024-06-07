@@ -198,16 +198,72 @@ console.log(Object.keys(obj12));//Excpected output will be the keys obj12
 
 /* values */
 console.log(Object.values(obj12));//Excpected output will be the values of obj12
-
-function createbio() {
+function createbio(userName, userPassword) {
     let factoryObject = {
-        "user_Name": userName,
-        "user_Password": userPassword,
-        introduceYourSelf(userName, userPassword) {
-            return `My name is ${this.user_Name} and pssword is ${this.user_Password}`;
+        user_Name: userName,
+        user_Password: userPassword,
+        introduceYourSelf() {
+            return `My name is ${this.user_Name} and password is ${this.user_Password}`;
         },
     };
     return factoryObject;
 }
- 
-console.log(factoryObject.introduceYourSelf("Muhammad Farooq", "858574"));
+const bio = createbio("Muhammad Farooq", "858574");
+console.log(bio.introduceYourSelf());
+
+
+/* Recursive function */
+function addNumbers() {
+    return console.log("Hello World!");
+}
+addNumbers();
+
+/* function expressions with parameters*/
+const multiplyValues = function (n) {
+    return n * 5;
+}
+console.log(multiplyValues(8));//Excpected output will be 40
+
+/* function expression with name */
+const factorial1 = function fac(n) {
+    return n < 2 ? 1 : n * fac(n - 1); // 3 * (3 - 1) = Output: 6
+};
+console.log(factorial1(3)); // 6
+
+/* calling the function with validation */
+let num = 0;
+let myFunc;
+if (num === 0) {
+    myFunc = function (n) {
+        return n * 9
+    };
+};
+console.log(myFunc(8));
+
+function factorial2(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * factorial2(n - 1);
+    }
+}
+console.log(factorial2(4));//It will call untill the condition reaches
+
+/* function hoisting in function declaration */
+console.log(functionDeclaration(5));//Excpected output will be 25. There will be no error.
+function functionDeclaration(n) {
+    return n * n;
+}
+
+/* function hoisting in function expression */
+// console.log(functionExpression(5));//There will be error.
+// const functionExpression = function (n) {
+//     return n * n;
+// }
+
+/* Rest or Default parameter */
+function restfunction(n = "4") {
+    return n / 2;
+}
+console.log(restfunction()); //If there is no parameter then default value will be used
+console.log(restfunction(8)); //Provided value will be used

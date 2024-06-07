@@ -199,3 +199,15 @@ console.log(Object.keys(obj12));//Excpected output will be the keys obj12
 /* values */
 console.log(Object.values(obj12));//Excpected output will be the values of obj12
 
+function createbio() {
+    let factoryObject = {
+        "user_Name": userName,
+        "user_Password": userPassword,
+        introduceYourSelf(userName, userPassword) {
+            return `My name is ${this.user_Name} and pssword is ${this.user_Password}`;
+        },
+    };
+    return factoryObject;
+}
+ 
+console.log(factoryObject.introduceYourSelf("Muhammad Farooq", "858574"));

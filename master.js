@@ -267,3 +267,4 @@ function restfunction(n = "4") {
 }
 console.log(restfunction()); //If there is no parameter then default value will be used
 console.log(restfunction(8)); //Provided value will be used
+console.log("Hello World!")

@@ -268,3 +268,22 @@ function restfunction(n = "4") {
 console.log(restfunction()); //If there is no parameter then default value will be used
 console.log(restfunction(8)); //Provided value will be used
 console.log("Hello World!")
+
+/* Scope in Js */
+let userEmail = "famuhammad907@gmail.com"; //This let variable is a global scope variable. Mean you can access everywhere in the file
+if (true) {
+    console.log(userEmail)
+}
+
+/* hoisting in function declaration */
+console.log(multiply(8));// We can access the output without any error.
+function multiply(num) {
+    return num * 8;
+}
+
+/* hoisting in function expression */
+// console.log(multiply(8));// We can access the output without any error.
+// const multiply = function (num) {
+//     return num * 8;
+// }
+

@@ -287,3 +287,7 @@ function multiply(num) {
 //     return num * 8;
 // }
 
+/* this in Node */
+console.log(this);//Excpected output will be Emty object
+
+/* this in Browser will give you global window object */

@@ -319,4 +319,28 @@ for (let index = 1; index < 4; index++) {
   console.log(index);
 }
 
+/* High Order Functions */
 
+/* for Of */
+let myArray = [1, 32, 56, 55, 56, 44];
+
+for (const keys of myArray) {
+  console.log(keys);
+}
+
+let MyStr = "Hello World!";
+for (const keys of MyStr) {
+  if (keys === " ") {
+    console.log(keys);
+    break;
+  }
+  console.log(keys);
+}
+
+/********** DOM **********/
+
+/* Generating Random Id for a div */
+// const div = document.createElement("div");
+// div.className = "divClass";
+// div.id = Math.round(Math.random() * 100 + 1);
+// console.log(div);

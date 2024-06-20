@@ -344,3 +344,5 @@ for (const keys of MyStr) {
 // div.className = "divClass";
 // div.id = Math.round(Math.random() * 100 + 1);
 // console.log(div);
+
+console.log("Hello World!");

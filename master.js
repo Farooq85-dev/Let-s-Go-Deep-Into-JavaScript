@@ -344,29 +344,3 @@ for (const keys of MyStr) {
 // div.className = "divClass";
 // div.id = Math.round(Math.random() * 100 + 1);
 // console.log(div);
-
-//******** Events *********
-
-/* removeEventListener */
-const userName = () => {
-  console.log(`Muhammad Farooq`);
-};
-const helloBtn = document.getElementById("hello");
-const worldBtn = document.getElementById("world");
-helloBtn.addEventListener("click", userName);
-helloBtn.removeEventListener("click", userName); //It will remove listner from the hellobtn
-
-/* passing an abort signal */
-const controller = new AbortController();
-helloBtn.addEventListener(
-  "click",
-  () => {
-    console.log(`Event is aborted`);
-  },
-  { signal: controller.signal }
-);
-controller.abort(); //It will also removes event listener
-
-worldBtn.addEventListener("mouseenter", (e) => {
-  console.log(e);
-});

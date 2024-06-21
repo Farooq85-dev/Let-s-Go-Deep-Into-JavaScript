@@ -370,3 +370,14 @@ controller.abort(); //It will also removes event listener
 worldBtn.addEventListener("mouseenter", (e) => {
   console.log(e);
 });
+
+// *********** Block Code VS non-block Code *************
+
+//Block Code means Sync Code---->Block the execution===> Each operation waits for last to complete
+//Non-Block Code means Async code---->Doesn't Block the execution===> Does't wait for last opearation to complete
+
+console.log("1");
+setTimeout(() => {
+  console.log("2");
+}, 0);
+console.log("3"); // Output will be 1,3,2. Because, setTimeout is using callback it goes to further procedure befor completing this next will execute.

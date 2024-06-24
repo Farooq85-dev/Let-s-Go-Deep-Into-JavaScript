@@ -388,3 +388,16 @@ console.log("3"); // Output will be 1,3,2. Because, setTimeout is using callback
 //   console.log(e.keyCode);
 // });
 
+/* Fetch API */
+
+//Path to resource is the mndatory argument of fetch API.
+fetch("https://fakestoreapi.com/products")
+  .then((res) => res.json())
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err))
+  //finally method will always run. However, promise has been resolved or rejected.
+  .finally(() => {
+    return console.log(`Promise has been resolved or rejected!`);
+  });
+
+  

@@ -400,4 +400,18 @@ fetch("https://fakestoreapi.com/products")
     return console.log(`Promise has been resolved or rejected!`);
   });
 
-  
+// getOwnPrpoertyDescriptor
+const object = {
+  name: "Muhammad",
+  class: "B.S",
+  section: "A+",
+};
+console.log(Object.getOwnPropertyDescriptor(object, "name")); //All otputs will be true
+
+//We are defining to not enumerate, writ and configure name prperty
+Object.defineProperty(object, "name", {
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
+console.log(Object.getOwnPropertyDescriptor(object, "name")); //All Output will be false

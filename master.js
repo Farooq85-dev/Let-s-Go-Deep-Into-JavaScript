@@ -415,3 +415,61 @@ Object.defineProperty(object, "name", {
   enumerable: false,
 });
 console.log(Object.getOwnPropertyDescriptor(object, "name")); //All Output will be false
+
+//definePrprties
+const object1 = {
+  number: 42,
+};
+Object.defineProperties(object1, {
+  number: {
+    value: 42,
+    writable: false,
+    configurable: true,
+    enumerable: true,
+  },
+});
+object1.number = 77; // This will not change the value of property1
+console.log(object1.number);
+
+class userDetails {
+  constructor(userName, userEmail, userPassword) {
+    this.userName = userName;
+    this.userEmail = userEmail;
+    this.userPassword = userPassword;
+  }
+
+  get userPassword() {
+    return this._userPassword.toUpperCase();
+  }
+
+  set userPassword(value) {
+    this._userPassword = value;
+  }
+
+  get userEmail() {
+    return this._userEmail.toUpperCase();
+  } // getting ahmed@gmail.com
+
+  set userEmail(email) {
+    this._userEmail = email;
+  } //setting AHMED@GMAIL.COM
+}
+
+const injecting = new userDetails(
+  "Muhammad Ahmed",
+  "ahmed@gmail.com",
+  "abcxyz"
+);
+
+console.log(injecting.userPassword);
+console.log(injecting.userEmail);
+
+//closures
+function outer() {
+  let name = "Muhammad Farooq";
+  function inner() {
+    console.log(name);
+  }
+  inner();
+}
+outer();
